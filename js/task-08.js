@@ -19,3 +19,19 @@
 
 
 
+const form = document.querySelector('.login-form');
+form.addEventListener('submit', formSubmit);
+function formSubmit(event) {
+    event.preventDefault();
+    const formElement = event.currentTarget.elements;
+    const email = formElement.email.value;
+    const password = formElement.password.value;
+    const data = { email, password };
+    if (email === '' || password === '') {
+        alert('All fileds must to be filled');
+    } else {
+        console.log(data);
+    }
+    form.reset();
+}
+console.log(form);

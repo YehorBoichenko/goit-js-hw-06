@@ -14,6 +14,7 @@ const images = [
 ];
 
 const galleryItem = ({ url, alt }) => `<li><img src="${url}" alt="${alt}" width = 200 height = 150></li>`;
+
 const gallery = images.reduce((acc, item) => acc + galleryItem(item), "");
 const galleryList = document.querySelector("#gallery");
 galleryList.setAttribute("style", "list-style-type:none; display: flex;")
